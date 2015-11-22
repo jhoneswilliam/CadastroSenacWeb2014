@@ -1,0 +1,49 @@
+create table usuarios(
+codigo int(5) primary key auto_increment,
+nome varchar(40),
+email varchar(40),
+login varchar(15),
+senha varchar(10));
+
+insert into usuarios values(
+0,
+'Administrador',
+'adm@adm.com.br',
+'adm',
+'adm');
+
+select * from usuarios;
+
+
+
+
+create table pacotes(
+codigo int(5) primary key auto_increment,
+titulo varchar(150),
+descricao text,
+dti varchar(10),
+dtf varchar(10),
+valor decimal(5,2),
+roteiro text,
+capa varchar(30),
+ativo char);
+
+insert into pacotes values(
+0,'Pacote Novo de Viagem Super Especial',
+'Descrição do Pacote',
+'05/12/2014',
+'22/12/2014',
+999.00,
+'Roteiro do Pacote',
+'imagem/pacote1.jpg',
+'s');
+
+select * from pacotes;
+
+
+create table logg(
+codigo int(5) primary key auto_increment,
+login varchar(15),
+dt varchar(10),
+hr varchar(8),
+ip varchar(15));
